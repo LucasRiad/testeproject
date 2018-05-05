@@ -68,3 +68,8 @@ tr:hover{
     padding:4px;
     border: darkblue
 }
+.table td, .table th {
+    padding: 5px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
