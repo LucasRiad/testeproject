@@ -1,42 +1,52 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Trabalho MyProject</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <main>   
-            <div class="tab DinamicTable">
-                    Nome: <input type="text" name="nome" id="nome">
-                    Descrição: <input type="text" name="descricao" id="descricao">
-                    Tempo para Finalização: <input type="text" name="temp_Fin" id="temp_Fin">
-                    <br>
+<html><head>
+    <title>Trabalho MyProject</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <main>   
+        <h1 class="display-2 text-center" style="margin-top: 130px;">Lista de Tarefas</h1>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend" style="width: 600px;height: 30px;margin-left: 370px;">
+                  <span class="input-group-text" id="inputGroup-sizing-sm" style="border-radius: .25rem;font-size: 1.1rem">Tarefa:</span>
+                  <input type="text" class="form-control" name="nome" id="nome" style="margin-left: 5px;width: 126px;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                  <br>
+                  <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 5px;border-radius: .25rem;font-size: 1.1rem">Descrição:</span>
+                  <input type="text" class="form-control" name="descricao" id="descricao" style="margin-left: 5px;margin-top: 0px;width: 126px;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                  <br>
+                  <span class="input-group-text" id="inputGroup-sizing-sm" style="margin-left: 5px;border-radius: .25rem;font-size: 1.1rem">Tempo para Finalização:</span>
+                  <input type="text" class="form-control" name="temp_Fin" id="temp_Fin" style="margin-left: 5px;margin-top: 0px;width: 126px;" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
-                    <div class="DinamicTable2">                 
-                    <button class="btn btn-primary" onclick="addRow();" style="padding-top: 3px; padding-bottom: 3px">Nova Tarefa <i class="fa fa-pencil"></i></button>    
-                    <button class="btn btn-primary" onclick="changeRow();" style="padding-top: 3px; padding-bottom: 3px">Alterar Tarefa <i class="fa fa-gear"></i></button>
-                    <button class="btn btn-primary" onclick="removeRow();" style="padding-top: 3px; padding-bottom: 3px">Remover Tarefa <i class="fa fa-trash"></i></button>
-                    <button class="btn btn-primary" onclick="changeStatus();" style="padding-top: 3px; padding-bottom: 3px">Tarefa Completa <i class="fa fa-trophy"></i></button>
+              </div>
+            
+            <div class="DinamicTable2" style="margin-right: 420px;margin-top: 10px;">                 
+                <button class="btn btn-primary" onclick="addRow();" style="padding-top: 3px; padding-bottom: 3px">Nova Tarefa <i class="fa fa-pencil"></i></button>    
+                <button class="btn btn-primary" onclick="changeRow();" style="padding-top: 3px; padding-bottom: 3px">Alterar Tarefa <i class="fa fa-gear"></i></button>
+                <button class="btn btn-primary" onclick="removeRow();" style="padding-top: 3px; padding-bottom: 3px">Remover Tarefa <i class="fa fa-trash"></i></button>
+                <button class="btn btn-primary" onclick="changeStatus();" style="padding-top: 3px; padding-bottom: 3px">Tarefa Completa <i class="fa fa-trophy"></i></button>
+             </div>
+            
+            <div class="container text-center" style="margin-left: 330px;margin-top: 10px;height: 300px;padding: 5px">
+                <div class="tab TableFirstLine" style="margin-left: 132px;margin-top: 20px;padding: 5px">
+                    <table class="table table-striped table-primary" id="table" border="2">
+                        <tbody><tr style="padding: 5px"> 
+                            <th style="padding: 5px">Nome</th>
+                            <th style="padding: 5px">Descrição</th>
+                            <th style="padding: 5px">Tempo para Finalização</th>
+                            <th style="padding: 5px">Condição</th>
+                        </tr> 
+                    </tbody></table>
+                    <button class="btn btn-primary" onclick="" style="padding-top: 3px; padding-bottom: 3px"><i class="fa fa-star"></i></button>
+                    <button class="btn btn-primary" onclick="" style="padding-top: 3px; padding-bottom: 3px"><i class="fa fa-star"></i></button>
                  </div>
-                </div>
-                <div class="container">
-                    <div class="tab TableFirstLine">
-                        <table class="table table-striped table-info" id="table" border="1">
-                            <tr> 
-                                <th>Nome</th>
-                                <th>Descrição</th>
-                                <th>Tempo para Finalização</th>
-                                <th>Condição</th>
-                            </tr> 
-                        </table>
-                        <button class="btn btn-primary" onclick="changeStatus();" style="padding-top: 3px; padding-bottom: 3px"><i class="fa fa-star"></i></button>
-                        <button class="btn btn-primary" onclick="changeStatus();" style="padding-top: 3px; padding-bottom: 3px"><i class="fa fa-star"></i></button>
-                     </div>
-                    </div> 
-            </main>
-        <script src="js/script.js"></script>
-    </body>
-</html>
+                </div> 
+        </main>
+    <script src="js/script.js"></script>
+
+
+
+</body></html>

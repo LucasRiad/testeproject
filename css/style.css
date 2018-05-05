@@ -5,6 +5,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color:dodgerblue;
+    font-size: 1.3rem;
 }
 .container{
     overflow: hidden;   
@@ -35,7 +37,7 @@ body {
 }
 
 tr:hover{
-    background-color:dodgerblue;
+    background-color:rgb(139, 192, 245);
     cursor: pointer;
 }
 .icon {
@@ -46,3 +48,23 @@ tr:hover{
     stroke: currentColor;
     fill: currentColor;
   }
+  h1 {
+	margin-top: 12rem;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	font-family: var(--righteous-font);
+}
+:root {
+	--righteous-font: 'Righteous', cursive;
+}
+.input-group-text {
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    
+}
+.th{
+    padding:4px;
+    border: darkblue
+}
