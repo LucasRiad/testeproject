@@ -1,0 +1,48 @@
+body {
+    background-color:cornflowerblue ;
+    background: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/superhero-city-background-4.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container{
+    overflow: hidden;   
+ float: bottom;     
+}
+
+.tab{
+    float:left;
+}
+
+.DinamicTable{
+    margin:auto;
+
+
+}
+.DinamicTable2{
+    float:right;
+    margin:auto;
+}
+
+.DinamicTable input{
+    display: block;
+    margin:auto
+
+}
+.DinamicTable button{
+    margin:auto;
+}
+
+tr:hover{
+    background-color:dodgerblue;
+    cursor: pointer;
+}
+.icon {
+    display: inline-block;
+    width: 2px;
+    height: 3px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
